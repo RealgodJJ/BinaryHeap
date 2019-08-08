@@ -15,9 +15,16 @@ public class Array<T> {
         this(10);
     }
 
-    public Array(T[] num) {
-        data = num;
+    public Array(T[] array) {
+        data = (T[]) new Object[array.length];
+        for (int i = 0; i < array.length; i++)
+            data[i] = array[i];
+        size = array.length;
     }
+
+//    public Array(T[] num) {
+//        data = num;
+//    }
 
     public int getSize() {
         return size;
