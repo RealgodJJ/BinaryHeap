@@ -78,7 +78,7 @@ public class MaxHeap<T extends Comparable<T>> {
     }
 
     public T replace(T e) {
-        //找到待删除的元素
+        //找到待删除的元素作为函数的返回值
         T ret = findMax();
         //将最大堆中的最大元素设置为e
         data.setElement(e, 0);
@@ -86,7 +86,7 @@ public class MaxHeap<T extends Comparable<T>> {
         return ret;
     }
 
-    private T findMax() {
+    public T findMax() {
         if (getSize() == 0)
             throw new IllegalArgumentException("The maxHeap is null.");
 
